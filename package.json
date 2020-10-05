@@ -1,35 +1,28 @@
 {
-  "name": "excalibur-webpack",
+  "name": "tiny-mmo-test",
   "version": "1.0.0",
-  "private": true,
-  "description": "a webpack starter for excaliburjs projects",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack",
-    "webpack-dev-server": "webpack-dev-server --env.mode development --open",
-    "dev": "npm run webpack-dev-server",
-    "start": "npm run dev",
-    "build:dev": "npm run webpack -- --env.mode development",
-    "build:prod": "npm run webpack -- --env.mode production"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
-  "author": "Excalibur.js Team",
-  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlbeard84/tiny-mmo-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlbeard84/tiny-mmo-test/issues"
+  },
+  "homepage": "https://github.com/jlbeard84/tiny-mmo-test#readme",
   "devDependencies": {
-    "clean-webpack-plugin": "3.0.0",
-    "compression-webpack-plugin": "5.0.2",
-    "file-loader": "6.1.0",
-    "html-webpack-plugin": "4.5.0",
-    "source-map-loader": "1.1.0",
-    "ts-loader": "8.0.4",
-    "typescript": "4.0.3",
-    "uglifyjs-webpack-plugin": "2.2.0",
-    "webpack": "4.44.2",
-    "webpack-cli": "3.3.12",
-    "webpack-dev-server": "3.11.0",
-    "webpack-merge": "4.2.2"
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.3"
   },
   "dependencies": {
-    "excalibur": "0.24.5"
+    "excalibur": "^0.24.5"
   }
 }

@@ -1,0 +1,1 @@
+export { SwordActor } from './sword-actor';

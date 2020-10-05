@@ -1,0 +1,1 @@
+export { GameResources } from './resources';
