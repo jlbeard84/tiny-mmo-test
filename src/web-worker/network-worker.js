@@ -1,5 +1,3 @@
-var enet = require('enet');
-
 const serverAddress = "localhost";
 const serverPort = 7777;
 
@@ -20,14 +18,5 @@ self.addEventListener('message', function(e) {
 }, false);
 
 function createWorker() {
-    client = enet.createClient();
-    var server_address = new enet.Address(serverAddress, serverPort);
 
-    console.log(`Creating enet client with address of ${server_address}:${serverPort}`);
-    peer = client.createClient(server_address);
-
-    peer.on('connect', function() {
-        console.log("Enet client connected");
-        peer.ping();
-    });
 }
