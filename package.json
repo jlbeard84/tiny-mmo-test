@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@types/node": "^14.11.4",
+    "enet": "^0.2.9",
     "excalibur": "^0.24.5"
   }
 }

@@ -9,6 +9,9 @@ const game = new ex.Engine({
     height: GameConstants.WindowHeight
 });
 
+const worker = new Worker('./web-worker/network-worker.js');
+worker.postMessage({'cmd': 'initialize'});
+
 const loader = new ResourceLoader();
 
 const testScene = new TestScene(game);
