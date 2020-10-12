@@ -16,6 +16,9 @@ self.addEventListener('message', function(e) {
         case 'initialize':
             createWorker();
             break;
+        case 'posUpdate':
+            sendPosition(data.x, data.y);
+            break;
     }
 }, false);
 
@@ -66,6 +69,7 @@ function processInboundMessage(message) {
         case "playerid":
             playerId = message.messageData;
             console.log(`PlayerId set to ${playerId}`);
+            postMessage({"cmd": "playerId", "data": playerId });
             break;
     }
 }
@@ -82,7 +86,19 @@ function sendInitialization() {
     });
 }
 
+function sendPosition(x, y) {
+    outboundMessageQueue.push({
+        "messageType": 'posUpdate',
+        "xPos": x,
+        "yPos": y
+    });
+}
+
 function processOutboundMessages() {
+    if (!connected) {
+        return;
+    }
+
     var messagesToSend = [];
 
     while (outboundMessageQueue.length > 0) {

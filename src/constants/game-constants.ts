@@ -4,5 +4,5 @@ export class GameConstants {
 
     public static SocketServerAddress = "ws://0.0.0.0:5000/";
     public static SocketServerRetryCount = 3;
-    public static SocketServerSendInterval = 20;
+    public static SocketServerSendInterval = 10;
 }
